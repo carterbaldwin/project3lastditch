@@ -1,20 +1,7 @@
-// import React from "react";
-
-// const Nav = () => (
-//   <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-//     <a className="navbar-brand" href="/">
-//       Clothing Inventory
-//     </a>
-//   </nav>
-// );
-
-// export default Nav;
-
-
 import React, { Component } from "react";
-import "./nav.css";
+import "./Navbar.css";
 
-class Nav extends Component {
+class Navbar extends Component {
 
    
 
@@ -40,4 +27,4 @@ class Nav extends Component {
     }
 }
 
-export default Nav;
+export default Navbar;
