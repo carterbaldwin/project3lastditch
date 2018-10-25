@@ -26,6 +26,10 @@ class Clothes extends Component {
       .catch(err => console.log(err));
   };
 
+  updateMannequin = (type) => {
+    console.log(type)
+  }
+
   render() {
     return (
       <Container fluid>
@@ -55,7 +59,9 @@ class Clothes extends Component {
                 {this.state.clothes.map(clothes => (
                   <ListItem key={clothes._id}>
                     {/* <a href={"/clothes/" + clothes._id}> */}
-                    <AddBtn />
+                    
+                    <ul onClick ={ () => this.updateMannequin(clothes.type)}><AddBtn /></ul>
+
                     <a href={clothes.link}>
                       <strong>
                         <ul>
@@ -81,10 +87,10 @@ class Clothes extends Component {
             </Jumbotron>
             <form>
               <ul> <img src= {Mannequin} /></ul>
-              <Input name="type" placeholder="type of clothing" />
+              {/* <Input name="type" placeholder="type of clothing" />
               <Input name="name" placeholder="name of clothing" />
               <TextArea name="link" placeholder="link to clothing" />
-              <FormBtn>Submit Clothing</FormBtn>
+              <FormBtn>Submit Clothing</FormBtn> */}
             </form>
           </Col>
         </Row>

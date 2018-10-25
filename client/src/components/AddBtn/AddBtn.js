@@ -5,7 +5,7 @@ import "./AddBtn.css";
 // That way we don't have to define them all individually
 const AddBtn = props => (
   <span className="add-btn" {...props}>
-    +
+    <h4>+</h4>
   </span>
 );
  
