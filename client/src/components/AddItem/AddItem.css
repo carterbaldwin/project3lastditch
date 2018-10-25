@@ -1,0 +1,18 @@
+button {
+    background-color: #229EA9;
+    color: black;
+    border-radius: 5px;
+    padding: 1%;
+    font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
+    font-weight: bold;
+}
+    
+button:hover {
+    background-color: rgb(24, 114, 122);
+    font-weight: bolder;
+    color: white;
+}
+
+.addItem-text {
+    font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
+}

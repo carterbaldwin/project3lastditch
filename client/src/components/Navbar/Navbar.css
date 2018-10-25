@@ -4,6 +4,7 @@ nav {
     padding-right: 1%;
     background-color: #00BFA5 !important;
     font-weight: bold;
+    margin-bottom: 1%;
 }
 
 .btn {
@@ -22,4 +23,8 @@ nav {
     font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
     font-weight: 700;
     font-size: 20px;
+}
+
+p {
+    margin: 0;
 }

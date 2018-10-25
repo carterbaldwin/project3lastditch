@@ -82,7 +82,7 @@ class AddItem extends Component {
                 className="submitBtn"
                 onClick={this.handleSubmit}
                 type="submit" 
-                >Submit</button> 
+                >SUBMIT</button> 
             </div>
             </form>
             </div>
