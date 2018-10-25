@@ -6,17 +6,16 @@ import AddItem from "./components/AddItem";
 
 class App extends Component {
 
-
   render(){
     return(
       <div>
     <Router>
       <div>
-      <Navbar />
-      <Route exact path="/UserInventory" component={Clothes} />
-      <Route exact path="/AddItem" component={AddItem} />
+        <Navbar />
+          <Route exact path="/UserInventory" component={Clothes} />
+          <Route exact path="/AddItem" component={AddItem} />
       </div>
-      </Router>
+    </Router>
   </div>
      )
     }
