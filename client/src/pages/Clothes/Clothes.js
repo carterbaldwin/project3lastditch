@@ -124,7 +124,7 @@ class Clothes extends Component {
             {this.state.clothes.length ? (
               <List>
                 {this.state.clothes.map(clothes => (
-                  <ListItem key={clothes.type}>
+                  <ListItem key={clothes.name}>
                     {/* <a href={"/clothes/" + clothes._id}> */}
                     
                     <ul onClick ={ () => this.updateMannequin(clothes.type)}><AddBtn /></ul>
@@ -132,7 +132,7 @@ class Clothes extends Component {
 
                     <a href={clothes.link}>
                       <strong>
-                        <ul><h5>
+                        <ul class="main-text"><h5>
                         {clothes.name}
                         </h5></ul>
                         {/* <ul>
