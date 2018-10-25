@@ -55,17 +55,17 @@ class AddItem extends Component {
             <label htmlFor="itemName">Item Name</label>
             <input
                 type="text"
-                name="type"
+                name="name"
                 placeholder="name the item"
-                value={this.state.type}
+                value={this.state.name}
                 onChange={this.handleInputChange}
             />
             <label htmlFor="itemType">item type</label>
             <input
                 type="text"
-                name="name"
-                placeholder="[pants,shoes,hat,etc]"
-                value={this.state.name}
+                name="type"
+                placeholder="[pants, shoes, hat, etc]"
+                value={this.state.type}
                 onChange={this.handleInputChange}
             />
             <label htmlFor="itemLink">Link to product</label>

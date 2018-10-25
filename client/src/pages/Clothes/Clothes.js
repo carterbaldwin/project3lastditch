@@ -124,26 +124,17 @@ class Clothes extends Component {
             {this.state.clothes.length ? (
               <List>
                 {this.state.clothes.map(clothes => (
-                  <ListItem key={clothes.type}>
+                  <ListItem key={clothes.name}>
                     {/* <a href={"/clothes/" + clothes._id}> */}
 
-                    <div className="btnHolder">
-                     <button 
-                       className="submitBtn"
-                       onClick={this.handleSubmit}
-                       name={this.handleInputChange}
-                       value={console.log(this.state.shoesTrig)}
-                       type="submit" 
-                       >Submit</button> 
-                     </div>
-        
+                  
                     
                     <ul onClick ={ () => this.updateMannequin(clothes.type)}><AddBtn /></ul>
 
 
                     <a href={clothes.link}>
                       <strong>
-                        <ul><h5>
+                        <ul class="main-text"><h5>
                         {clothes.name}
                         </h5></ul>
                         {/* <ul>
