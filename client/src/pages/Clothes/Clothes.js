@@ -2,9 +2,14 @@ import React, { Component } from "react";
 import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
 import DeleteBtn from "../../components/DeleteBtn";
-import { Col, Row, Container } from "../../components/Grid";
+import { Col, Row, Container } from "../../components/Grid"; 
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
+
+import AddBtn from "../../components/AddBtn";
+import Mannequin from "../../components/images/2dmannequin.png";
+
+
 
 class Clothes extends Component {
   state = {
@@ -25,7 +30,7 @@ class Clothes extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-6">
+          {/* <Col size="md-6">
             <Jumbotron>
               <h1>What Clothing Should I Wear?</h1>
             </Jumbotron>
@@ -35,27 +40,52 @@ class Clothes extends Component {
               <TextArea name="link" placeholder="link to clothing" />
               <FormBtn>Submit Clothing</FormBtn>
             </form>
-          </Col>
+          </Col> */}
           <Col size="md-6 sm-12">
             <Jumbotron>
               <h1>Clothes On My List</h1>
             </Jumbotron>
+
+
+
+        
+
             {this.state.clothes.length ? (
               <List>
                 {this.state.clothes.map(clothes => (
                   <ListItem key={clothes._id}>
-                    <a href={"/clothes/" + clothes._id}>
+                    {/* <a href={"/clothes/" + clothes._id}> */}
+                    <AddBtn />
+                    <a href={clothes.link}>
                       <strong>
-                        {clothes.name} by {clothes.type}
+                        <ul>
+                        {clothes.name}
+                        </ul>
+                        {/* <ul>
+                        <a href={clothes.link}/>
+                        </ul> */}
                       </strong>
                     </a>
                     <DeleteBtn />
                   </ListItem>
-                ))}
+                ))}   
               </List>
             ) : (
               <h3>No Results to Display</h3>
             )}
+          </Col>
+
+          <Col size="md-6">
+            <Jumbotron>
+              <h1>What Clothing Should I Wear?</h1>
+            </Jumbotron>
+            <form>
+              <ul> <img src= {Mannequin} /></ul>
+              <Input name="type" placeholder="type of clothing" />
+              <Input name="name" placeholder="name of clothing" />
+              <TextArea name="link" placeholder="link to clothing" />
+              <FormBtn>Submit Clothing</FormBtn>
+            </form>
           </Col>
         </Row>
       </Container>
@@ -64,3 +94,4 @@ class Clothes extends Component {
 }
 
 export default Clothes;
+  
