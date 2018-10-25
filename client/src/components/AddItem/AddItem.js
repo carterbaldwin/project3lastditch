@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import "./AddItem.css";
 import axios from "axios";
+import { Link, Redirect} from "react-router-dom";
 
 class AddItem extends Component {
     state = {
         type: "",
         name: "",
         link: "",
-        bookData: {}
+        bookData: {},
+        trigger: false
     }
 
     handleInputChange = e => {
@@ -22,6 +24,7 @@ class AddItem extends Component {
             type: this.state.type,
             name: this.state.name,
             link: this.state.link,
+            trigger: true,
             bookData: {
             type: this.state.type,
             name: this.state.name,
@@ -43,6 +46,9 @@ class AddItem extends Component {
     }
 
     render(){
+        if(this.state.trigger === true ){
+            return <Redirect to="/UserInventory" />
+        }
         return(
             <div className="addItem-main">
             <div className="container">
@@ -55,17 +61,17 @@ class AddItem extends Component {
             <label htmlFor="itemName">Item Name</label>
             <input
                 type="text"
-                name="type"
+                name="name"
                 placeholder="name the item"
-                value={this.state.type}
+                value={this.state.name}
                 onChange={this.handleInputChange}
             />
             <label htmlFor="itemType">item type</label>
             <input
                 type="text"
-                name="name"
-                placeholder="[pants,shoes,hat,etc]"
-                value={this.state.name}
+                name="type"
+                placeholder="[pants, shoes, hat, etc]"
+                value={this.state.type}
                 onChange={this.handleInputChange}
             />
             <label htmlFor="itemLink">Link to product</label>
