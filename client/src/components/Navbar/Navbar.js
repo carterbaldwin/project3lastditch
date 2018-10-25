@@ -15,7 +15,7 @@ class Navbar extends Component {
                 <ul id="nav-mobile" className="left hide-on-small-only ">
                     <li><a className="waves-effect waves-light btn" href="/UserInventory">Inventory</a></li>
                     <li><a className="waves-effect waves-light btn" href="/AddItem">Add Item</a></li>
-                    <li><a className="waves-effect waves-light btn" href="/Signup">Signup</a></li>
+                    
                     <li><a className="waves-effect waves-light btn" href="/Login">Login</a></li>
                 </ul>
 
