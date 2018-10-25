@@ -1,12 +1,34 @@
-import React from "react";
+import React, {Component} from "react";
 import "./AddBtn.css";
 
-// The ...props means, spread all of the passed props onto this element
-// That way we don't have to define them all individually
-const AddBtn = props => (
-  <span className="add-btn" {...props}>
-    +
-  </span>
-);
+
+
+
+class AddBtn extends Component {
+state={
+  hatTrig: false,
+  fullbodyTrig: false,
+  
+}
+
+handleSubmit = e => {
+  e.preventDefault();
+  console.log("working")
+}
+render() {
+  return(
+
+    <div className="btnHolder">
+    <button 
+    className="submitBtn"
+    onClick={this.handleSubmit}
+    type="submit" 
+    >Add to Mannequin</button> 
+   </div>
+
+  );
+}
+
+}
  
 export default AddBtn;
