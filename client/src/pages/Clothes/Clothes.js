@@ -13,7 +13,13 @@ import Mannequin from "../../components/images/2dmannequin.png";
 
 class Clothes extends Component {
   state = {
-    clothes: []
+    clothes: [],
+    hatTrig: false,
+    fullbodyTrig: false,
+    shirtTrig: false,
+    pantsTrig: false,
+    shoesTrig: false,
+    clotheType: []
   };
 
   componentDidMount() {
@@ -25,6 +31,25 @@ class Clothes extends Component {
       .then(res => this.setState({ clothes: res.data }))
       .catch(err => console.log(err));
   };
+  handleInputChange = event => {
+    // Destructure the name and value properties off of event.target
+    // Update the appropriate state
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
+  handleSubmit = e => {
+    e.preventDefault();
+    this.setState({
+      shoesTrig: true
+    })
+    
+  };
+
+  updateMannequin = (type) => {
+    console.log(type)
+  }
 
   render() {
     return (
@@ -55,7 +80,21 @@ class Clothes extends Component {
                 {this.state.clothes.map(clothes => (
                   <ListItem key={clothes._id}>
                     {/* <a href={"/clothes/" + clothes._id}> */}
-                    <AddBtn />
+
+                    <div className="btnHolder">
+                     <button 
+                       className="submitBtn"
+                       onClick={this.handleSubmit}
+                       name={this.handleInputChange}
+                       value={console.log(this.state.shoesTrig)}
+                       type="submit" 
+                       >Submit</button> 
+                     </div>
+        
+                    
+                    <ul onClick ={ () => this.updateMannequin(clothes.type)}><AddBtn /></ul>
+
+
                     <a href={clothes.link}>
                       <strong>
                         <ul>
@@ -81,10 +120,7 @@ class Clothes extends Component {
             </Jumbotron>
             <form>
               <ul> <img src= {Mannequin} /></ul>
-              <Input name="type" placeholder="type of clothing" />
-              <Input name="name" placeholder="name of clothing" />
-              <TextArea name="link" placeholder="link to clothing" />
-              <FormBtn>Submit Clothing</FormBtn>
+
             </form>
           </Col>
         </Row>
