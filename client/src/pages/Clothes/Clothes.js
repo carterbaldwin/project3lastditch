@@ -47,6 +47,10 @@ class Clothes extends Component {
     
   };
 
+  updateMannequin = (type) => {
+    console.log(type)
+  }
+
   render() {
     return (
       <Container fluid>
@@ -76,6 +80,7 @@ class Clothes extends Component {
                 {this.state.clothes.map(clothes => (
                   <ListItem key={clothes._id}>
                     {/* <a href={"/clothes/" + clothes._id}> */}
+
                     <div className="btnHolder">
                      <button 
                        className="submitBtn"
@@ -86,6 +91,10 @@ class Clothes extends Component {
                        >Submit</button> 
                      </div>
         
+                    
+                    <ul onClick ={ () => this.updateMannequin(clothes.type)}><AddBtn /></ul>
+
+
                     <a href={clothes.link}>
                       <strong>
                         <ul>
@@ -111,7 +120,7 @@ class Clothes extends Component {
             </Jumbotron>
             <form>
               <ul> <img src= {Mannequin} /></ul>
-             
+
             </form>
           </Col>
         </Row>

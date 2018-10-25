@@ -4,6 +4,7 @@ import "./AddBtn.css";
 
 
 
+
 class AddBtn extends Component {
 state={
   hatTrig: false,
@@ -30,5 +31,12 @@ render() {
 }
 
 }
+// The ...props means, spread all of the passed props onto this element
+// That way we don't have to define them all individually
+const AddBtn = props => (
+  <span className="add-btn" {...props}>
+    <h4>+</h4>
+  </span>
+);
  
 export default AddBtn;
