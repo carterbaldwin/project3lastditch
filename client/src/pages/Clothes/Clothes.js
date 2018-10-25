@@ -22,11 +22,13 @@ import "./Clothes.css";
 class Clothes extends Component {
   state = {
     clothes: [],
+
     bodyWear: "",
     hat: "",
     shoes: "",
     pants: "",
     shirt: "",
+
 
   };
 
@@ -38,6 +40,21 @@ class Clothes extends Component {
     API.getClothes()
       .then(res => this.setState({ clothes: res.data }))
       .catch(err => console.log(err));
+  };
+  handleInputChange = event => {
+    // Destructure the name and value properties off of event.target
+    // Update the appropriate state
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
+  handleSubmit = e => {
+    e.preventDefault();
+    this.setState({
+      shoesTrig: true
+    })
+    
   };
 
  
@@ -109,8 +126,20 @@ class Clothes extends Component {
                 {this.state.clothes.map(clothes => (
                   <ListItem key={clothes.type}>
                     {/* <a href={"/clothes/" + clothes._id}> */}
+
+                    <div className="btnHolder">
+                     <button 
+                       className="submitBtn"
+                       onClick={this.handleSubmit}
+                       name={this.handleInputChange}
+                       value={console.log(this.state.shoesTrig)}
+                       type="submit" 
+                       >Submit</button> 
+                     </div>
+        
                     
                     <ul onClick ={ () => this.updateMannequin(clothes.type)}><AddBtn /></ul>
+
 
                     <a href={clothes.link}>
                       <strong>
@@ -136,6 +165,7 @@ class Clothes extends Component {
               <h1>What Clothing Should I Wear?</h1>
             </Jumbotron>
             <form>
+
               {/* <ul> <img src= {Mannequin} /></ul> */}
 
               <div class="parent">
@@ -151,6 +181,7 @@ class Clothes extends Component {
 
               </div>
               
+
             </form>
           </Col>
         </Row>
