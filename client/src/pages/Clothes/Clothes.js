@@ -42,7 +42,7 @@ class Clothes extends Component {
             </Jumbotron>
             {this.state.clothes.length ? (
               <List>
-                {this.state.clothes.map(book => (
+                {this.state.clothes.map(clothes => (
                   <ListItem key={clothes._id}>
                     <a href={"/clothes/" + clothes._id}>
                       <strong>
