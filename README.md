@@ -2,8 +2,8 @@
 
 <h2>What is it?</h2>
 A MERN stack application. Inventory allows you to build, save, and share outfits with your friends!
-Using Facebook login verification and MongoDB to store items in your closet, our app provides the user with a visual representations of their favorite outfits.
-Share inspiration with your friends and find your next must-have clothing items of the season.
+Using Facebook login verification and MongoDB to store items in your closet, our app provides the user with a visual representations of their favorite outfits. Share inspiration with your friends and find your next must-have clothing items of the season.
+Online shopping has grown immensely in popularity, but shoppers are left feeling like they are guessing if clothes purchased online will fit as expected. Inventory aims to alleviate this by providing a visual tool to help shoppers figure out what to wear and how to wear it no matter where you are.
 
 <p align="center">
 <img alt="Inventory App" src="./images/inventoryhome.png" style="width: 80px;">
@@ -41,6 +41,8 @@ Once you build your closet, you can build outfits on your avatar.
   <li>Social interaction on Facebook</li>
   <li>Filter inventory by occassion, such as casual vs. professional</li>
   <li>Implement weather API to give you daily outfit recommendations</li>
+  <li>Customizable avatars</li>
+  <li>Enter your measurements so retailers can recommend your size</li>
  </ul>
 
 <h2>Check us out on Heroku!</h2>
