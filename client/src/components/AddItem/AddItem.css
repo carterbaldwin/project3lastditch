@@ -1,0 +1,34 @@
+button {
+    background-color: #229EA9;
+    color: black;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
+    font-weight: bold;
+    margin-top: 1%;
+    text-align: center;
+}
+    
+button:hover {
+    background-color: rgb(24, 114, 122);
+    font-weight: bolder;
+    color: white;
+}
+
+.addItem-text {
+    font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
+    text-align: center;
+}
+
+.addItem-form {
+    font-size: 120%;
+    color: rgba(165, 164, 164, 0.705);
+}
+
+label {
+    font-size: 100%;
+    color: black;
+}

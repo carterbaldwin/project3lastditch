@@ -153,7 +153,7 @@ class Clothes extends Component {
 
           <Col size="md-6">
             <Jumbotron>
-              <h1>What Clothing Should I Wear?</h1>
+              <h1>What Should I Wear?</h1>
             </Jumbotron>
             <form>
 

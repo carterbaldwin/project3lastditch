@@ -58,7 +58,6 @@ class AddItem extends Component {
                     <h1 className="addItem-text">Add Item</h1>
                 </div>
             <form className="addItem-form">
-            <label htmlFor="itemName">Item Name</label>
             <input
                 type="text"
                 name="name"
@@ -66,7 +65,7 @@ class AddItem extends Component {
                 value={this.state.name}
                 onChange={this.handleInputChange}
             />
-            <label htmlFor="itemType">item type</label>
+            <label htmlFor="itemName">Item Name</label>
             <input
                 type="text"
                 name="type"
@@ -74,7 +73,7 @@ class AddItem extends Component {
                 value={this.state.type}
                 onChange={this.handleInputChange}
             />
-            <label htmlFor="itemLink">Link to product</label>
+            <label htmlFor="itemType">Item Type</label>
             <input
                 type="text"
                 name="link"
@@ -82,13 +81,13 @@ class AddItem extends Component {
                 value={this.state.link}
                 onChange={this.handleInputChange}
             />
-          
+            <label htmlFor="itemLink">Link to Product</label>
             <div className="btnHolder">
                 <button 
                 className="submitBtn"
                 onClick={this.handleSubmit}
                 type="submit" 
-                >Submit</button> 
+                >SUBMIT</button> 
             </div>
             </form>
             </div>
